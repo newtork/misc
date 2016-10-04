@@ -10,22 +10,22 @@ function closestSequence2(a, b) {
 	var DistanceUntil = Array(a.length).fill(Infinity);
 	
 	// DTW algorithm
-    for (i=0; i<b.length; i++) {
+	for (i=0; i<b.length; i++) {
 	
 		// init current distance array
 		var Dcurrent = [];
 	
-        for (j=0; j<a.length; j++) {
+		for (j=0; j<a.length; j++) {
 			
 			var DTWi1j0 = Infinity // Dprev[j] // would be DTW default
 			var DTWi1j1 = j===0 ? 0 : Dprev[j-1];
 			var DTWi0j1 = j===0 ? 0 : Dcurrent[j-1];
 			
 			var Dmin = Math.min(DTWi1j0,  // insertion
-								DTWi0j1,  // deletion
-								DTWi1j1)  // match
+			                    DTWi0j1,  // deletion
+			                    DTWi1j1)  // match
 			
-            Dcurrent[j] = d(a[j], b[i]) + Dmin;
+			Dcurrent[j] = d(a[j], b[i]) + Dmin;
 		}
 		Dprev = Dcurrent;
 		
@@ -38,5 +38,5 @@ function closestSequence2(a, b) {
 		);
 	}
 	
-    return DistanceUntil[a.length-1];    
+	return DistanceUntil[a.length-1];    
 }
