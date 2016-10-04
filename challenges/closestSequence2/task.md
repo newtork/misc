@@ -19,17 +19,13 @@ The best subsequence will be ```b' = [1, 3, 5]``` which has a difference of ```2
 
  * [time limit] 4000ms (js)
  * [input] array.integer a
+  * _Constraints:_
+    * 3 ≤ a.length ≤ 1000,
+    * -1000 ≤ a[i] ≤ 1000.
 
-#### Constraints:
+ * [input] array.integer b
+  * _Constraints:_
+    * a.length ≤ b.length ≤ 1000,
+    * -1000 ≤ b[i] ≤ 1000.
 
- * 3 ≤ a.length ≤ 1000,
- * -1000 ≤ a[i] ≤ 1000.
-
-### [input] array.integer b
-
-#### Constraints:
-
- * a.length ≤ b.length ≤ 1000,
- * -1000 ≤ b[i] ≤ 1000.
-
-### [output] integer
+ * [output] integer
