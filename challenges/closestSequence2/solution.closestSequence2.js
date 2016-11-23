@@ -24,12 +24,12 @@ function closestSequence2(a, b) {
 	var DistanceUntil = Array(a.length).fill(Infinity);
 	
 	// DTW algorithm
-	for (i=0; i<b.length; i++) {
+	for (var i=0; i<b.length; i++) {
 	
 		// init current distance array
 		var Dcurrent = [];
 	
-		for (j=0; j<a.length; j++) {
+		for (var j=0; j<a.length; j++) {
 			
 			var DTWi1j0 = Infinity // Dprev[j] // would be DTW default
 			var DTWi1j1 = j===0 ? 0 : Dprev[j-1];
